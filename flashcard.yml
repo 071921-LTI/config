@@ -13,3 +13,14 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: false
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: group-id
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serilizer.JsonDeserializer
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.serialization.StringDeserializer
+      value-serializer: org.springframework.kafka.support.serilizer.JsonDeserializer
