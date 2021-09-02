@@ -18,9 +18,9 @@ spring:
       bootstrap-servers: localhost:9092
       group-id: group-id
       auto-offset-reset: earliest
-      key-deserializer: org.apache.kafka.serialization.StringDeserializer
-      value-deserializer: org.springframework.kafka.support.serilizer.JsonDeserializer
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
     producer:
       bootstrap-servers: localhost:9092
-      key-serializer: org.apache.kafka.serialization.StringDeserializer
-      value-serializer: org.springframework.kafka.support.serilizer.JsonDeserializer
+      key-serializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonDeserializer
